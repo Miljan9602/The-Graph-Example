@@ -1,3 +1,1 @@
-# Example Subgraph
-
-An example to help you get started with The Graph. For more information see the docs on https://thegraph.com/docs/.
+Contract example: https://github.com/Miljan9602/The-Graph-Contract-Example

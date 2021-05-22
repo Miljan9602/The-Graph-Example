@@ -2,24 +2,24 @@ specVersion: 0.0.2
 description: Storage for Ethereum
 repository: https://github.com/graphprotocol/example-subgraph
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Storage
     network: mainnet
     source:
-      address : "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
+      address: "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab"
       abi: Storage
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
-      file: ./src/mapping.ts
+      file: Storage/Storage.wasm
       entities:
         - Storage
       abis:
         - name: Storage
-          file: ./abis/Storage.json
+          file: Storage/abis/Storage.json
       eventHandlers:
         - event: SetValue(uint256)
           handler: handleSetValue
